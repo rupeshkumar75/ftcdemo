@@ -69,5 +69,9 @@
     </definition> 
    <definition name="tile.reportHomePage" extends="mainLayout">     
         <put-attribute name="body-content" value="/WEB-INF/jsp/content/reportHome.jsp" />
-    </definition>     
+    </definition>
+    <!--  Kudos Pages  -->
+    <definition name="tile.kudosStartPage" extends="blankLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/kudos/home.jsp" />
+    </definition>
  </tiles-definitions>    
