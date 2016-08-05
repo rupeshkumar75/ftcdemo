@@ -1,5 +1,6 @@
 package com.citizant.fraudshield.dao.impl;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -19,16 +20,11 @@ public class ActivityLogDaoImpl extends DaoBaseImpl implements ActivityLogDao {
 	@Override
 	public void log(ActivityLog log) {
 		
-		super.saveOrUpdate(log);
 	}
 
 	@Override
 	public List<ActivityLog> getActivities(int type, Date start, Date end) {
-		Criteria criteria = super.getCurrentSession().createCriteria(ActivityLog.class);		
-		criteria.add(Restrictions.ge("activityDate", start));
-		criteria.add(Restrictions.le("activityDate", end));
-		criteria.add(Restrictions.eq("activityType", type));
-	    return criteria.list();	 
+		return new ArrayList<ActivityLog>();
 	}
 	
 	@Override

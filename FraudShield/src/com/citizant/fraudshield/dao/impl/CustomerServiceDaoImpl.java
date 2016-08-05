@@ -1,6 +1,7 @@
 package com.citizant.fraudshield.dao.impl;
 
 import java.security.GeneralSecurityException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.crypto.NoSuchPaddingException;
@@ -108,33 +109,7 @@ public class CustomerServiceDaoImpl extends DaoBaseImpl implements
 			hsql.append(" and pi.active = :ai3)");
 		}
 		
-		Query query = this.getCurrentSession().createQuery(hsql.toString());
-		query.setBoolean("ai1", Boolean.TRUE);
-		if (!StringUtil.isEmpty(fName))
-		{
-			query.setString("fn", "%" + fName.toUpperCase() + "%");
-		}
-		if (!StringUtil.isEmpty(lName))
-		{
-			query.setString("ln", "%" + lName.toUpperCase() + "%");
-		}
-		if (!StringUtil.isEmpty(ssn))
-		{
-			query.setString("ssn", ssn);
-		}
-		if (!StringUtil.isEmpty(address))
-		{
-			query.setString("a1", "%" + address.toUpperCase() + "%");
-			query.setString("a2", "%" + address.toUpperCase() + "%");
-			query.setBoolean("ai2", Boolean.TRUE);
-		}
-		if (!StringUtil.isEmpty(docType))
-		{
-			query.setString("docType", docType);
-			query.setBoolean("ai3", Boolean.TRUE);
-		}
-		
-		return query.list();
+		return  new ArrayList<Person>();
 	}
 	
 	
@@ -144,27 +119,8 @@ public class CustomerServiceDaoImpl extends DaoBaseImpl implements
 			String encryptedSsn, 
 			String encryptedDob) throws NoSuchPaddingException, GeneralSecurityException {
 		
-		Criteria criteria = super.getCurrentSession().createCriteria(Person.class);
-		if (!StringUtil.isEmpty(fName))
-		{
-			criteria.add(Restrictions.eq("firstName", fName));
-		}
-		if (!StringUtil.isEmpty(lName))
-		{
-			criteria.add(Restrictions.eq("lastName", lName));
-		}
-		if (!StringUtil.isEmpty(encryptedSsn))
-		{
-			criteria.add(Restrictions.eq("ssn", encryptedSsn));
-		}
-		if (!StringUtil.isEmpty(encryptedDob))
-		{
-			criteria.add(Restrictions.eq("dob", encryptedDob));
-		}
-		criteria.add(Restrictions.eq("active", Boolean.TRUE));
+		return  new Person();
 		
-		
-		return (Person)criteria.uniqueResult();
 	}
 
 
