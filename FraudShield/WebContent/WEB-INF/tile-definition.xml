@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC 
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+    <definition name="mainLayout" template="/WEB-INF/jsp/layout/mainLayout.jsp">   
+        <put-attribute name="header" value="/WEB-INF/jsp/common/header.jsp" />   
+        <put-attribute name="body-content" value="" />      
+    </definition>
+
+    <definition name="blankLayout" template="/WEB-INF/jsp/layout/blankLayout.jsp">    
+        <put-attribute name="body-content" value="" />      
+    </definition>
+
+    <definition name="tile.loginPage" extends="blankLayout">
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/login.jsp" />
+    </definition>
+    <definition name="tile.errorPage" extends="mainLayout">
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/error.jsp" />
+    </definition>
+     <definition name="tile.homePage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/home.jsp" />
+    </definition>
+    <definition name="tile.searchPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/customerSearch.jsp" />
+    </definition>
+    <definition name="tile.customerEditPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/customerEdit.jsp" />
+    </definition>
+    <definition name="tile.adminPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/admin.jsp" />
+    </definition>
+    <definition name="tile.customersReport" extends="mainLayout">
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/customersReport.jsp" />
+    </definition>
+    <definition name="tile.accessDeniedPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/ajaxAccessDenied.jsp" />
+    </definition>
+    
+    <definition name="tile.renewRequestPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/renewRequest.jsp" />
+    </definition>
+    
+    <definition name="tile.renewConfirmPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/renewConfirm.jsp" />
+    </definition>
+    
+     <definition name="tile.waitInterviewPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/waitInterview.jsp" />
+    </definition>
+    
+    <definition name="tile.cctsoPanelPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/cctsoPanel.jsp" />
+    </definition>  
+    
+    <definition name="tile.cctsoInterviewPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/cctsoInterview.jsp" />
+    </definition> 
+    
+    <definition name="tile.tsoHomePage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/tsoHome.jsp" />
+    </definition> 
+    
+    <definition name="tile.lostPasswordPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/lostPassword.jsp" />
+    </definition> 
+    <definition name="tile.resetPasswordPage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/resetPassword.jsp" />
+    </definition> 
+   <definition name="tile.reportHomePage" extends="mainLayout">     
+        <put-attribute name="body-content" value="/WEB-INF/jsp/content/reportHome.jsp" />
+    </definition>     
+ </tiles-definitions>    

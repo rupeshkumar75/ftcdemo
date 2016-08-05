@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<system-config>
+	
+	<id-service-url>http://localhost:8090/FraudShieldIDService/servlet/idservice/getId</id-service-url>
+	<face-service-url>http://localhost:8090/FacialRecognitionService/servlet/faceservice</face-service-url>	
+	<asw-s3-bucket>fraudshield-dev-bucket-c58f0569-4d71-4b2f-b2af-04dcbbaec33e</asw-s3-bucket>
+	<data-key-id>arn:aws:kms:us-east-1:434141935580:key/365aca6a-a109-446f-a62d-c77e2cfb887b</data-key-id>
+	<kms-end-point>https://kms.us-east-1.amazonaws.com</kms-end-point>
+	<ses-sender-email>swang@citizant.com</ses-sender-email>
+	<load-balancer-address>http://localhost:8090/FraudShield/</load-balancer-address>
+	<webrtc-server>http://webrtc.tsosecurelogin.com/</webrtc-server>
+	
+	<reset-email-subject>Fraud Shield TSO user account password reset</reset-email-subject>
+	<reset-email-content>
+	    You recently requested to reset your password. Please click on the following link to reset your password. 
+	    This link is time sensitive, it will be valid until EXPIRETIME
+	    
+	    http://localhost:8090/FraudShield/servlet/home/passwordReset?resetCode=RESETCODE
+	    
+	    Thanks
+	    
+	    Fraud Shield LLC.
+	</reset-email-content>
+	
+	<confirm-email-subject>Fraud Shield TSO user password changed</confirm-email-subject>
+	<confirm-email-content>
+	    Your Fraud Shield TSO user password was changed successfully.
+	    
+	    Regards
+	    
+	    Fraud Shield LLC.
+	</confirm-email-content>
+	
+	<card-instruction>INSERT - Limitation of Liability Clause  (Being drafted by attorney)</card-instruction>
+	
+	
+	<server-id>fss-01</server-id>
+	
+</system-config>
