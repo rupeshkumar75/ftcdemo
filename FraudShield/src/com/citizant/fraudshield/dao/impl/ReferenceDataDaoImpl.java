@@ -1,5 +1,6 @@
 package com.citizant.fraudshield.dao.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -17,8 +18,7 @@ public class ReferenceDataDaoImpl extends DaoBaseImpl implements
 
 	@Override
 	public List<ReferenceData> getAllReferenceData() {
-		Criteria criteria = super.getCurrentSession().createCriteria(ReferenceData.class);
-		return criteria.list();
+		return new ArrayList<ReferenceData>();
 	}
 
 	@Override
@@ -29,9 +29,7 @@ public class ReferenceDataDaoImpl extends DaoBaseImpl implements
 
 	@Override
 	public List<ReferenceData> getReferenceDataByCategory(String category) {
-		Criteria criteria = super.getCurrentSession().createCriteria(ReferenceData.class);
-		criteria.add(Restrictions.eq("refCategory", category));
-		return criteria.list();
+		return new ArrayList<ReferenceData>();
 	}
 
 }
