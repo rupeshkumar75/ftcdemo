@@ -3,7 +3,8 @@
               Any modifications will be overwritten.
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="war" name="FraudShield">
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="war" name="FraudShield" xmlns:jacoco="antlib:org.jacoco.ant">
     <property environment="env"/>
     <property name="ECLIPSE_HOME" value="../../apps/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
@@ -13,6 +14,10 @@
     <property name="test.build.dir" value="build/classes" />
     <property name="test.src.dir" value="test" />
     <property name="webapp.lib" value ="WebContent/WEB-INF/lib" />
+
+  <taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
+    <classpath path="test-dependencies/jacocoant.jar" />
+  </taskdef>
 
     <path id="classpath.test">
         <pathelement location="test-dependencies/junit-4.12.jar"/>
@@ -196,7 +201,8 @@
 	</target>
 
 <target name="test" depends="build"> <!-- later: depend on test-compile -->
-    <junit printsummary="on" haltonfailure="yes" fork="true">
+  <jacoco:coverage>
+    <junit printsummary="on" haltonfailure="yes" fork="true" forkmode="once">
         <classpath>
           <path refid="classpath.test"/>
           <pathelement location="${test.build.dir}"/>
@@ -206,5 +212,6 @@
             <fileset dir="${test.src.dir}" includes="**/*Test.java" />
         </batchtest>
     </junit>
+  </jacoco:coverage>
   </target>
 </project>
