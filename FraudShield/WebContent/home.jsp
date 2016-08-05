@@ -66,7 +66,7 @@ img.wp-smiley,img.emoji {
 				<hgroup>
 					<div id="site-logo">
 						<a href="https://fraudshieldllc.com/" title="TSO Secure Login">
-							<img src="images/Blu-FS-logo-slogan.png" alt="TSO Secure Login"
+							<img src="images/flash.jpg" width="300" height="200" border="0" alt="TSO Secure Login"
 							title="TSO Secure Login" /> <span style="display: none;">TSO
 								Secure Login</span>
 						</a>

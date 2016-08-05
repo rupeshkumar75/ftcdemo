@@ -75,7 +75,7 @@ html {
 	<body class="login login-action-login wp-core-ui  locale-en-us">
 	<div id="login">
 		
-		<img src="images/Blu-FS-logo-slogan.png" border="0"/>
+		<img src="images/flash.jpg" width="300" height="200" border="0"/>
 <% if(errorMsg != null) { %>
 	<div id="errorMsg" style=" color: red;"><%=errorMsg%></div>
 <%} %>

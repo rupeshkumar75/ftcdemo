@@ -40,7 +40,7 @@
 </style>
 
         <div class="container">
-        	<img style="float: left;" src="${pageContext.request.contextPath}/images/Blu-FS-logo-slogan.png"/>          
+        	<img style="float: left;" src="${pageContext.request.contextPath}/images/flash.jpg"/>          
      		<div class="header01">Identity Verification System</div>
      		<div class="menubox">
 	     		<% if (isAdmin) {%>	        
