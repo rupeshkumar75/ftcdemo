@@ -7,7 +7,7 @@ public class HelloTest {
 
     @Test
     public void basicArithmeticShouldWork() {
-        assertEquals(2, 1 + 1);
+        assertEquals(2, Hello.add(1, 1));
     }
 
 }
