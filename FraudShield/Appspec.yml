@@ -1,7 +1,7 @@
 version: 0.0 
 os: linux 
 files: 
- - source:  s3://flashbucket1/kudos/Flash_Job-1847672421979155779.zip
+ - source:  /webContents/kudos.war
    destination: /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war
 hooks: 
    ApplicationStop: 
