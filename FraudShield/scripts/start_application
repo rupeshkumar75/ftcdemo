@@ -3,5 +3,5 @@
 
 set -e 
 
-cp S3 $CATALINA_HOME/webapps/kudos.war 
+cp S3 /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war 
 service tomcat start
