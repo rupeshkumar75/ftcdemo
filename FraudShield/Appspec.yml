@@ -1,8 +1,8 @@
 version: 0.0 
 os: linux 
 files: 
- - source:  sonar-project.properties
-   destination: /home/tomcat/apache-tomcat-8.0.36/webapps/ 
+ - source:  s3://flashbucket1/kudos/Flash_Job-1847672421979155779.zip
+   destination: /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war
 hooks: 
    ApplicationStop: 
      - location: scripts/stop_application 
