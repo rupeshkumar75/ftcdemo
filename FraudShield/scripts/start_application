@@ -1,1 +1,7 @@
 
+#!/bin/bash 
+
+set -e 
+
+cp S3 $CATALINA_HOME/webapps/kudos.war 
+service tomcat start
