@@ -3,7 +3,4 @@
 
 set -e 
 
-
-aws s3 cp s3://flashbucket1/kudos.war /tmp
-sudo mv /tmp  /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war 
 service tomcat start
