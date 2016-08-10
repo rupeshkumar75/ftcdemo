@@ -1,8 +1,8 @@
 version: 0.0 
 os: linux 
 files: 
- - source:  /kudos.war
-   destination: /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war 
+ - source:  sonar-project.properties
+   destination: /home/tomcat/apache-tomcat-8.0.36/webapps/ 
 hooks: 
    ApplicationStop: 
      - location: scripts/stop_application 
