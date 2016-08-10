@@ -1,7 +1,7 @@
 version: 0.0 
 os: linux 
 files: 
- - source:  /webContents/kudos.war
+ - source:  /FraudShield/kudos.war
    destination: /home/tomcat/apache-tomcat-8.0.36/webapps/kudos.war
 hooks: 
    ApplicationStop: 
